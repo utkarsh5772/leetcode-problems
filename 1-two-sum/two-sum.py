@@ -4,7 +4,7 @@ class Solution(object):
             for j in range(i + 1, len(nums)):
                 if nums[j] == target - nums[i]:
                     return [i, j]
-        # Return an empty list if no solution is found
+
         return []
 
         
