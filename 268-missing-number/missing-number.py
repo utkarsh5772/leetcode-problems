@@ -1,5 +1,12 @@
-
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        return reduce(xor, (i ^ v for i, v in enumerate(nums, 1)))
+class Solution(object):
+    def missingNumber(self, nums):
+        n = len(nums)
+        v = [-1] * (n+1) 
+        for num in nums:
+            v[num] = num
+        for i in range(len(v)):
+            if v[i] == -1:
+              return i
+        return 0    
+        
         
