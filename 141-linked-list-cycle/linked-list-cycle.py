@@ -1,13 +1,14 @@
 class Solution(object):
     def hasCycle(self, head):
+        #pointers intialization
         slow = head
         fast = head
-
-        while fast is not None and fast.next is not None:
-            slow = slow.next
+        #iterating through the loop
+        while fast and fast.next:
             fast = fast.next.next
-            if slow == fast:
-                return True  
+            slow = slow.next
 
-        return False  
-        
+            if fast == slow:
+                return True
+
+        return False        
