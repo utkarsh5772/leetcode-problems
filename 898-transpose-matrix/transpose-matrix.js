@@ -8,6 +8,5 @@ var transpose = function(matrix) {
             trans[i][j] = matrix[j][i];
         }
     }
-
     return trans;
 };
