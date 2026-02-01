@@ -6,7 +6,7 @@ class Solution:
         for i in range(len(nums)):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
-            
+
             j = i + 1
             k = len(nums) - 1
 
@@ -18,10 +18,11 @@ class Solution:
                 elif total < 0:
                     j += 1
                 else:
-                    res.append([nums[i], nums[j], nums[k]])
+                    res.append([nums[i], nums[j] ,nums[k]])
                     j += 1
 
                     while nums[j] == nums[j-1] and j < k:
                         j += 1
+        return res                
+
         
-        return res
